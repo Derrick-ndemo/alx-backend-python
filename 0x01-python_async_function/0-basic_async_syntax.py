@@ -7,11 +7,11 @@ import asyncio
 import random
 
 
-async def wait_random(max_delay = 10):
+async def wait_random(max_delay: int = 10) -> float:
     """
     :param: max_delay
     :return: return a randowm delay
     """
-    random_delay = random.uniform(0, max_delay)
-    await asyncio.sleep(random_delay)
-    return random_delay
+    wait_time = random.uniform(0, max_delay)
+    await asyncio.sleep(wait_time)
+    return wait_time
